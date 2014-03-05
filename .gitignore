@@ -1,0 +1,6 @@
+build/
+.hyde_deps
+content/.hyde_deps
+
+# LaTeX
+*.pdf

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+  {% block favicons %}
+  <!-- Place favicon.ico & apple-touch-icon.png
+        in the root of your domain and delete these references -->
+  <!--
+  <link rel="shortcut icon" href="{{ media_url('favicon.ico') }}">
+  <link rel="apple-touch-icon" href="{{ media_url('apple-touch-icon.png') }}"> -->
+  {% endblock favicons %}
+
+  {% block css %}
+    <link rel="stylesheet" href="{{ media_url('css/style.css') }}">
+    <script src="{{ media_url('js/scale.fix.js') }}"></script>
+  {% endblock css %}
+
+  <body>
+    {% block content %}
+      <header>
+        {% block header %}
+          <h1><a href="{{ content_url('') }}">Hilfi Alkaff</a></h1>
+          <hr />
+        {% endblock header %}
+      </header>
+
+      <div class="wrapper">
+        {% block wrapper %}
+          <nav>
+	          {% block nav %}
+              <p class="view"><a href="{{ content_url('industry.html') }}">Industry Experience<small>My employment history</small></a></p>
+              <p class="view"><a href="{{ content_url('projects.html') }}">Projects<small>Code You Might find Useful</small></a></p>
+              <p class="view"><a href="{{ content_url('resume.html') }}">Resume<small>All About my Work</small></a></p>
+            {% endblock nav %}
+
+            {% block media %}
+              <h3>On the Web</h3>
+              <p class="view"><a href="http://www.linkedin.com/pub/hilfi-alkaff/47/73a/228">LinkedIn</a>
+              <p class="view"><a href="http://github.com/hilfialkaff" target="tab">GitHub</a>
+            {% endblock media %}
+          </nav>
+
+          <section id="main">
+            {% block main %}
+              {{ content }}
+            {% endblock main %}
+          </section>
+
+          {% block footer %}
+            <footer>
+              <p><small>Built with <a href="http://hyde.github.io/">Hyde</a> &mdash;
+              Layout adapted from <a href="https://github.com/orderedlist">orderedlist</a>.</small></p>
+            </footer>
+          {% endblock footer %}
+        {% endblock wrapper %}
+      </div>
+    {% endblock content %}
+
+    {% block js %}
+      {% block jquery %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      {% endblock jquery %}
+    {% endblock js %}
+  </body>
+</html>
