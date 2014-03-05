@@ -1,8 +1,15 @@
+"""
+This file automatically deploys a Hyde application to the AWS cluster.
+
+Ensure that you have the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
+environmental variable setup.
+"""
+
 from boto import connect_s3
 from boto.s3.key import Key
 import os
 
-BUCKET_NAME = "lewebsite"
+BUCKET_NAME = "hilfialkaff.com"
 SRC_DIR = "./deploy/"
 
 def main():
