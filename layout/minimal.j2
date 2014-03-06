@@ -4,9 +4,9 @@
   {% block favicons %}
   <!-- Place favicon.ico & apple-touch-icon.png
         in the root of your domain and delete these references -->
-  <!--
+  {#}
   <link rel="shortcut icon" href="{{ media_url('favicon.ico') }}">
-  <link rel="apple-touch-icon" href="{{ media_url('apple-touch-icon.png') }}"> -->
+  <link rel="apple-touch-icon" href="{{ media_url('apple-touch-icon.png') }}"> #}
   {% endblock favicons %}
 
   {% block css %}
@@ -27,15 +27,17 @@
         {% block wrapper %}
           <nav>
 	          {% block nav %}
-              <p class="view"><a href="{{ content_url('industry.html') }}">Industry Experience<small>My employment history</small></a></p>
-              <p class="view"><a href="{{ content_url('projects.html') }}">Projects<small>Code You Might find Useful</small></a></p>
-              <p class="view"><a href="{{ content_url('resume.html') }}">Resume<small>All About my Work</small></a></p>
+              <p class="view"><a href="{{ content_url('industry.html') }}">Industry Experience <small>Where I Have Worked</small></a></p>
+              <p class="view"><a href="{{ content_url('projects.html') }}">Projects <small>What I Have Spent My Time On</small></a></p>
+              <p class="view"><a href="{{ content_url('resume.html') }}">Resume <small>Industry Experience + Projects + Stuffs</small></a></p>
             {% endblock nav %}
 
             {% block media %}
               <h3>On the Web</h3>
-              <p class="view"><a href="http://www.linkedin.com/pub/hilfi-alkaff/47/73a/228">LinkedIn</a>
-              <p class="view"><a href="http://github.com/hilfialkaff" target="tab">GitHub</a>
+              <p class="view"><img src="{{ media_url('images/linkedin.png') }}" width=18 height=18> <a href="https://www.linkedin.com/pub/hilfi-alkaff/47/73a/228" target="tab">LinkedIn</a>
+              <p class="view"><img src="{{ media_url('images/github.png') }}" width=18 height=18> <a href="https://www.github.com/hilfialkaff" target="tab">GitHub</a>
+              <p class="view"><img src="{{ media_url('images/twitter.png') }}" width=18 height=18> <a href="https://twitter.com/HilfiAlkaff1">Twitter</a>
+              <p class="view"><img src="{{ media_url('images/quora.png') }}" width=18 height=18> <a href="http://www.quora.com/Hilfi-Alkaff">Quora</a>
             {% endblock media %}
           </nav>
 
