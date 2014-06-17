@@ -32,18 +32,14 @@
       </header>
 
       <div class="main-content">
-        {% block wrapper %}
-            {% block main %}
-              {{ content }}
-            {% endblock main %}
-        {% endblock wrapper %}
+        {% block main %}
+          {{ content }}
+        {% endblock main %}
       </div>
     {% endblock content %}
 
     {% block js %}
-      {% block jquery %}
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-      {% endblock jquery %}
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     {% endblock js %}
   </body>
 </html>
